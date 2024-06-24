@@ -1,6 +1,7 @@
 package com.springteestproject.photos_clone;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -18,5 +19,10 @@ public class PhotosController {
     @GetMapping("/photos")
     public List<PhotoModel> getPhotos() {
         return db;
+    }
+
+    @GetMapping("/photos/{id}")
+    public PhotoModel getPhoto( String id) {
+        return db.stream().filter(photo -> photo.getId().equals(id)).findFirst().orElse(null);
     }
 }

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PhotosCloneApplication {
+public class MainPhotosCloneApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhotosCloneApplication.class, args);
+		SpringApplication.run(MainPhotosCloneApplication.class, args);
 	}
 
 }
