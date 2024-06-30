@@ -11,6 +11,16 @@ public class PhotoModel {
         this.fileName = fileName;
     }
 
+    private byte[] data;
+
+    public byte[] getData() {
+        return data;
+    }
+
+    public void setData(byte[] data) {
+        this.data = data;
+    }
+
     // This class is for creating the photo model for the database
     private String id;
     private String fileName;
