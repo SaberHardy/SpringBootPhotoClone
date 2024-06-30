@@ -1,5 +1,9 @@
 package com.springteestproject.photos_clone;
 
+import com.fasterxml.jackson.annotation.JacksonInject;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.validation.constraints.NotEmpty;
+
 public class PhotoModel {
 
     public PhotoModel() {
@@ -11,6 +15,7 @@ public class PhotoModel {
         this.fileName = fileName;
     }
 
+    @JsonIgnore
     private byte[] data;
 
     public byte[] getData() {
@@ -23,7 +28,11 @@ public class PhotoModel {
 
     // This class is for creating the photo model for the database
     private String id;
+
+    @NotEmpty
     private String fileName;
+
+
 
     public String getId() {
         return id;
